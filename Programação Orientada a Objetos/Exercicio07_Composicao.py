@@ -57,7 +57,7 @@ class Pedido:
             float: Total do pedido.
         """
         return sum(pedido.calcular_total() for pedido in self.lista_pedido)
-
+    
     def exibir_fatura(self):
         """
         Exibe a fatura detalhada com todos os itens do pedido,
@@ -84,6 +84,8 @@ if __name__ == "__main__":
 
     # Adiciona um item ao pedido
     pedido.adicionar_pedido("Pastel de carne", 3, 5)
+    pedido.adicionar_pedido("Pastel de frango", 3, 5)
+    pedido.adicionar_pedido("Pastel de queijo", 3, 5)
 
     # Exibe a fatura com os detalhes do pedido
     pedido.exibir_fatura()
